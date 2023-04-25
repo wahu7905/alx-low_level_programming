@@ -6,20 +6,22 @@
  */
 int main(void)
 {
-	int dig_1, dig_2;
+	int n;
+	int i;
 
-	for (dig_1 = 0; dig_1 = 9; dig_1++)
+	for (n = 0; n < 9; n++)
 	{
-		for (dig_2 = dig_1 + 1; dig_2 < 10; dig_2++)
-		{
-			putchar((dig_1 % 10) + '0');
-			putchar((dig_2 % 10) + '0');
-
-			if (dig_1 == 8 && dig_2 == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
-		}
+		i = n + 1;
+		do {
+			putchar('0' + n);
+			putchar('0' + i);
+			if (n < 8)
+			{
+				putchar(',');
+				putchar(32);
+			}
+			i++;
+		} while (i < 10);
 	}
 	putchar('\n');
 	return (0);
