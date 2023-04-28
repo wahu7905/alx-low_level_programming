@@ -1,29 +1,33 @@
 #include "main.h"
 
 /**
- * print_diagnol - draws a diagnol line on the terminal
- * @n: number of times the character \ should be printed
+ * print_diagonal -  checks for checks for a digit (0 through 9).
+ * @n: n -  Variable
+ *
+ * Return: Always 0.
  */
-
 void print_diagonal(int n)
 {
-	if (n <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
+	int x, y;
 
-		for (i = 0; i < n; i++)
+	if (n > 0)
+	{
+		for (x = 1; x <= n; x++)
 		{
-			for (j = 0; j < n; j++)
+			for (y = 1; y <= n; y++)
 			{
-				if (j == i)
-					_putchar('\\');
-				else if (j < i)
-					_putchar(' ');
+				if (x == y)
+				{
+					_putchar(92);
+					break;
+				}
+				_putchar(' ');
 			}
+			_putchar('\n');
 		}
+	}
+	else
+	{
 		_putchar('\n');
 	}
 }
