@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 
 	if (num < 0)
 	{
-		printf("0\n")
-			return (0);
+		printf("0\n");
+		return (0);
 	}
 
 	for (j = 0; j < 5 && num >= 0; j++)
